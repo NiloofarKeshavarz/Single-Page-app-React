@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Home , About, Contact} from './pages';
-import {Nav} from './layout';
+import {Nav, Footer} from './layout';
 import{
   BrowserRouter as Router,
   Switch,
@@ -11,11 +11,10 @@ import{
 
 function App() {
   return (
-    
-     <Router>
+    <div className='flex flex-col h-screen'>
+    <Router>
       <Nav />
       <Switch>
-        
         <Route path ="/about">
           <About /> 
         </Route>
@@ -25,8 +24,10 @@ function App() {
         <Route  path ="/">
           <Home /> 
         </Route>
-        </Switch>
-     </Router>
+      </Switch>
+      <Footer />
+    </Router>
+    </div>
 
 
    
