@@ -1,8 +1,9 @@
 import React from 'react';
+import {Layout} from '../layout';
 
 const Home = () => (
-    <div> 
+    <Layout> 
         This is the Home Page!
-    </div>
+    </Layout>
 )
 export default Home;
