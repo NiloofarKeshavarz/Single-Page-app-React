@@ -1,17 +1,12 @@
 import React from 'react';
+import Nav from './Nav';
 
 const Layout = (props) =>(
     
-    <div className ='bg-purple-500 border border-black m-5'>
-        <nav>
-            <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/'>About</a></li>
-            <li><a href='/'>Contact</a></li>
-            </ul>
-        </nav>
+    <div>
+        
         {props.children}
     </div>
 )
-export { Layout}; // difference between default and Named export
+export { Layout, Nav}; // difference between default and Named export
 // export default Layout;

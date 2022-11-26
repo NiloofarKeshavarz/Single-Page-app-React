@@ -1,17 +1,35 @@
 import React from 'react';
 import './App.css';
 import {Home , About, Contact} from './pages';
+import {Nav} from './layout';
+import{
+  BrowserRouter as Router,
+  Switch,
+  Route,
+ 
+} from "react-router-dom";
 
 function App() {
   return (
-    <div >
-     <h1> Hello Niloofar!</h1>
-     <Home /> 
-     <About /> 
-     <Contact /> 
+    
+     <Router>
+      <Nav />
+      <Switch>
+        
+        <Route path ="/about">
+          <About /> 
+        </Route>
+        <Route path ="/contact">
+          <Contact /> 
+        </Route>
+        <Route path ="/">
+          <Home /> 
+        </Route>
+        </Switch>
+     </Router>
 
 
-    </div>
+   
   );
 }
 
